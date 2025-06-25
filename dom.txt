@@ -1,0 +1,2 @@
+in Javasrcript, the DOM is represented as a set of objects that can be accessed and manipulated using the Document Object Model API.
+the DOM API provides methods and properties to traverse and manipulate the document tree, allowing developers to create dynamic and interactive web pages.
