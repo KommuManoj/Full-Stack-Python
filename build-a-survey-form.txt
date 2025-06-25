@@ -1,0 +1,123 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title">Customer Feedback Survey</h1>
+  <p id="description">We value your feedback. Please fill out this quick survey to help us improve!</p>
+
+  <form id="survey-form">
+    <!-- Name -->
+    <label id="name-label" for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Enter your full name"
+      required
+    />
+
+    <!-- Email -->
+    <label id="email-label" for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Enter your email address"
+      required
+    />
+
+    <!-- Age (Number) -->
+    <label id="number-label" for="number">Age:</label>
+    <input
+      type="number"
+      id="number"
+      name="age"
+      min="10"
+      max="100"
+      placeholder="Enter your age"
+      required
+    />
+
+    <!-- Dropdown -->
+    <label for="dropdown">Which option best describes your current role?</label>
+    <select id="dropdown" name="role" required>
+      <option value="" disabled selected>Select your role</option>
+      <option value="student">Student</option>
+      <option value="professional">Professional</option>
+    </select>
+
+    <!-- Radio Buttons -->
+    <p>Would you recommend us to a friend?</p>
+    <label><input type="radio" name="recommend" value="yes" /> Yes</label>
+    <label><input type="radio" name="recommend" value="no" /> No</label>
+
+    <!-- Checkboxes -->
+    <p>What would you like to see improved? (Select all that apply)</p>
+    <label><input type="checkbox" name="improvement" value="ui" /> User Interface</label>
+    <label><input type="checkbox" name="improvement" value="performance" /> Performance</label>
+    <label><input type="checkbox" name="improvement" value="content" /> Content Quality</label>
+
+    <!-- Textarea -->
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="5" placeholder="Enter your comments here..."></textarea>
+
+    <!-- Submit -->
+    <button type="submit" id="submit">Submit</button>
+  </form>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background:lightgreen;
+}
+
+h1, p {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label, input, select, textarea {
+  display: block;
+  width: 100%;
+}
+
+input, select, textarea, button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid rgb(169, 12, 148);
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #389ebd;
+}
+
+
+** end of styles.css **
+
