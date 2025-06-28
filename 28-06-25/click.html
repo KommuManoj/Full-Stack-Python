@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="abc" style="width: 100px; height: 100px; background-color: lightblue;"></div>
+    <br><br>
+    <button id="clickMe">Click Me</button>
+    <script>
+        // Fix the element ID from "box" to "abc"
+        let a = document.getElementById("abc");
+
+        a.addEventListener("dblclick", function() {
+            // Toggle background color on double click
+            if (a.style.backgroundColor === "lightblue") {
+                a.style.backgroundColor = "lightcoral";
+                a.innerHTML = "Double Clicked";
+            } else {
+                a.style.backgroundColor = "lightblue";
+                a.innerHTML = "";
+            }
+        });
+
+        a.addEventListener("mouseenter", function() {
+            a.style.backgroundColor = "lightcoral";
+        });
+
+        a.addEventListener("mouseleave", function() {
+            // Only revert if not double-clicked text
+            if (a.innerHTML !== "Double Clicked") {
+                a.style.backgroundColor = "lightblue";
+            }
+        });
+
+        document.getElementById("clickMe").addEventListener("click", function() {
+            alert("Button was clicked!");
+        });
+    </script>
+</body>
+</html>
